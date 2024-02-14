@@ -1,0 +1,155 @@
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f2f2f2;
+    margin: 0;
+    padding: 20px;
+}
+
+.header-message {
+    color: #aaaa7f;
+    text-align: center;
+}
+
+form {
+    background-color: #fff;
+    padding: 20px;
+    border-radius: 5px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+}
+
+label {
+    display: block;
+    margin-bottom: 5px;
+    color: #333;
+}
+
+input[type="text"],
+input[type="email"],
+textarea {
+    width: 100%;
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 3px;
+    font-size: 14px;
+}
+
+/*input[type="submit"],
+input[type="reset"] {
+    background-color: #4CAF50;
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 14px;
+    margin-top: 10px;
+    cursor: pointer;
+    border-radius: 3px;
+}
+
+input[type="submit"]:hover,
+input[type="reset"]:hover {
+    background-color: #45a049;
+}*/
+
+.submitinsert {
+    background-color: #4CAF50;
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 14px;
+    margin-top: 10px;
+    cursor: pointer;
+    border-radius: 3px;
+}
+
+.submitinsert:hover{
+    background-color: #45a049;
+}
+
+
+.submitquery {
+    background-color: #ff8800;
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 14px;
+    margin-top: 10px;
+    cursor: pointer;
+    border-radius: 3px;
+}
+
+.submitquery:hover{
+    background-color: #b86b14;
+}
+
+
+.type_of_work {
+    /*width: 150px;*/
+    height: 30px;
+    border: 1px solid #999;
+    font-size: 14px;
+    color: #4CAF50;
+    background-color: #eee;
+    border-radius: 5px;
+    /*box-shadow: 4px 4px #ccc;*/
+}
+
+
+.success-message {
+    color: #4CAF50;
+    margin-top: 10px;
+}
+
+
+
+.query-result {
+    background-color: #fff;
+    padding: 20px;
+    border-radius: 5px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+    margin-top: 20px;
+}
+
+table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-bottom: 20px;
+    table-layout: auto;
+}
+
+table th {
+    background-color: orange;
+    color: white;
+    font-weight: bold;
+    padding: 10px;
+    text-align: left;
+    border: 1px solid black;
+}
+
+table td {
+    padding: 10px;
+    border: 1px solid black;
+}
+
+table tr:nth-child(even) {
+    background-color: #f2f2f2;
+}
+
+.year {
+    /*width: 150px;*/
+    height: 30px;
+    border: 1px solid #999;
+    font-size: 14px;
+    color: #4CAF50;
+    background-color: #eee;
+    border-radius: 5px;
+    /*box-shadow: 4px 4px #ccc;*/
+}

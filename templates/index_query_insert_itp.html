@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>ITP Archive of Publication Entries</title>
+    <link rel="stylesheet" type="text/css" href= "{{ url_for('static',filename='css/style.css') }}">
+</head>
+<body>
+    <h1 class="header-message">ITP Archive of Publication Entries</h1>
+    <form action="/insert" method="post">
+        <label for="year">Publication Year:</label>
+        <select class="year" id="year" name="year" required>
+            <option value="" selected disabled hidden>Choose Publication Year</option>
+            <option value="2017">2017</option>
+            <option value="2018">2018</option>
+            <option value="2019">2019</option>
+            <option value="2020">2020</option>
+            <option value="2021">2021</option>
+            <option value="2022">2022</option>
+            <option value="2023">2023</option>
+            <option value="2024">2024</option>
+            <option value="2025">2025</option>
+        </select>
+        <label for="authors">Authors:</label>
+        <input type="text" name="authors" placeholder="Surname1, First1 (ORCID); Surname2, First2 (ORCID);..." required>
+        <br>
+        <label for="title">Title:</label>
+        <input type="text" name="title" placeholder="Title of publication." required>
+        <br>
+        <label for="datearchived">Date of archiving:</label>
+        <input type="text" name="datearchived" placeholder="Date of archiving: YYYY-MM-DD" required>
+        <br>
+        <label for="type_of_work">Type:</label>
+        <select class="type_of_work" id="type_of_work" name="type_of_work"  required>
+            <option value="" selected disabled hidden>Choose Publication Type</option>
+            <option value="ResearchArticle">ResearchArticle</option>
+            <option value="Book">Book</option>
+            <option value="Software">Software</option>
+            <option value="ResearchData">ResearchData</option>
+            <option value="BA/MA/PhD">BA/MA/PhD</option>
+            <option value="Other">Other</option>
+        </select>
+        <br>
+        <label for="path">Path Network Share:</label>
+        <input type="text" name="path" required>
+        <br>
+        <label for="doxis">Path DOXIS:</label>
+        <input type="text" name="doxis">
+        <br>
+        <label for="doi">DOI:</label>
+        <input type="text" name="doi" placeholder="https://doi.org/10.5281/zenodo.10122153">
+        <br>
+        <label for="comment">Comment:</label>
+        <input type="text" name="comment">
+        <br>
+        <input type="submit" value="Insert Data" class="submitinsert">
+    </form>
+    {% if success %}
+            <h2 class="success-message">Data inserted successfully!</h2>
+    {% endif %}
+    <h2>Execute SQL Query:</h2>
+    <form action="/query" method="post">
+        <textarea name="query" rows="5" cols="50" placeholder="Enter the authors name or ORCID. Or type '*' for full list..."></textarea>
+        <br>
+        <input type="submit" class="submitquery" value="Execute Query">
+    </form>
+    {% if query %}
+        <h2>Query Result:</h2>
+        <div class="query-result">
+            <table>
+                <thead>
+                    <tr>
+                        {% for column in columns %}
+                            <th>{{ column }}</th>
+                        {% endfor %}
+                    </tr>
+                </thead>
+                <tbody>
+                    {% for row in result %}
+                        <tr>
+                            {% for value in row %}
+                                <td>{{ value }}</td>
+                            {% endfor %}
+                        </tr>
+                    {% endfor %}
+                </tbody>
+            </table>
+        </div>
+    {% endif %}
+</body>
+</html>
+
