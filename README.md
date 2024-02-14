@@ -5,7 +5,7 @@ manage, inject and SQL-query with sqlite3 a database about publication entries.
 
 ## Set-Up and Run
 
-* Clone `git clone https://github.com/LeMonADE-project/LeMonADE.git`
+* Clone `git clone https://github.com/Bondoki/PublicationDataBase.git`
 * Install python3, sqlite3, flask
 * Just create in the first step the database:  
 ```python
